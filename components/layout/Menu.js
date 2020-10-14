@@ -38,9 +38,10 @@ const Navbar = styled(Nav)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 1.45rem;
+  margin: 0 1.2rem;
 
   @media screen and (min-width: 1200px) {
+    margin: 0 1.45rem;
     max-width: 1200px;
     padding: 1.25rem;
     margin-right: auto;
@@ -84,6 +85,7 @@ const DesktopNav = styled(Ul)`
 const MenuBtn = styled(MenuImg)`
   width: 38px;
   cursor: pointer;
+  margin-top: 2px;
 `
 
 const CloseBtn = styled(CloseImg)`
