@@ -56,6 +56,7 @@ module.exports = function (eleventyConfig) {
   return {
     dir: {
       input: config.inputDir, // we watch only this jsx files, not components
+      output: "dist"
     },
     markdownTemplateEngine: "jsx", // parse markdown file with jsx template engine
   };
