@@ -100,7 +100,7 @@ export default function Menu({ active }) {
 
   return (
     <Navbar>
-      <LogoLink href="/">
+      <LogoLink href="/" title="Homepage" aria-label="Homepage">
         <Logo />
       </LogoLink>
       <MobileNav>

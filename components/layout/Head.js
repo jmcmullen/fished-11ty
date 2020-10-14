@@ -2,7 +2,8 @@ import React from 'react'
 
 export default function Head({ title, slogan, description, ...props }) {
   return (
-    <head>
+    <head>    
+      <meta charset="UTF-8"/>
       {title && (
         <title>
           {title}

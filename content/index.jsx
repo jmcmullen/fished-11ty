@@ -213,7 +213,7 @@ export default function Index({ site, name }) {
           <StyledH3>How it works</StyledH3>
           <Row>
             <Step>
-              <StepImg src="/img/build.png" alt />
+              <StepImg src="/img/build.png" alt="building campaign" />
               <StepH3>Build a phishing campaign</StepH3>
               <P>
                 Choose from one of our optimized templates and create a phishing
@@ -221,7 +221,7 @@ export default function Index({ site, name }) {
               </P>
             </Step>
             <Step>
-              <StepImg src="/img/send.png" alt />
+              <StepImg src="/img/send.png" alt="sending campaign" />
               <StepH3>Send around your company</StepH3>
               <P>
                 Import your employee emails, start the campaign and watch the
@@ -229,7 +229,7 @@ export default function Index({ site, name }) {
               </P>
             </Step>
             <Step>
-              <StepImg src="/img/train.png" alt />
+              <StepImg src="/img/train.png" alt="training employees" />
               <StepH3>Provide instant training</StepH3>
               <P>
                 If an employee fails to identify the phishing attempt, we'll
