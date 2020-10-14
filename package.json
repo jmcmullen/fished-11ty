@@ -1,0 +1,38 @@
+{
+  "name": "blog",
+  "description": "Use React components in Eleventy",
+  "scripts": {
+    "dev": "ELEVENTY_EXPERIMENTAL=true eleventy --serve",
+    "build": "ELEVENTY_EXPERIMENTAL=true eleventy",
+    "storybook": "start-storybook -s ./_site -p 6006",
+    "build-storybook": "build-storybook -o _site/storybook",
+    "deploy": "npm run build && npm run build-storybook",
+    "release": "release-it"
+  },
+  "private": true,
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-optional-chaining": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "@storybook/addon-actions": "^6.0.22",
+    "@storybook/addon-essentials": "^6.0.22",
+    "@storybook/addon-links": "^6.0.22",
+    "@storybook/react": "^6.0.22",
+    "@svgr/webpack": "^5.4.0",
+    "babel-loader": "^8.1.0",
+    "cheerio": "^1.0.0-rc.3",
+    "core-js": "^3.6.5",
+    "dayjs": "^1.9.1",
+    "faker": "^5.1.0",
+    "fast-glob": "^3.2.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-is": "^16.13.1",
+    "release-it": "^13.7.1",
+    "styled-components": "^5.2.0",
+    "webpack": "^4.44.2"
+  },
+  "dependencies": {},
+  "version": "0.2.2"
+}
