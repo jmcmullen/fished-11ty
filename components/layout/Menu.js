@@ -63,7 +63,7 @@ const sections = [
   },
 ]
 
-const MobileNav = styled(Ul)`
+const MobileNav = styled.div`
   display: block;
   margin: 0;
 

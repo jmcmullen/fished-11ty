@@ -19,7 +19,7 @@ export default function Head({ title, slogan, description, ...props }) {
         rel="icon"
         type="image/png"
         sizes="32x32"
-        href="/favicon-32x32.png"
+        href="/img/favicons/favicon-32x32.png"
       />
       <link
         rel="icon"
