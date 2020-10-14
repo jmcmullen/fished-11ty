@@ -85,7 +85,7 @@ const DesktopNav = styled(Ul)`
 const MenuBtn = styled(MenuImg)`
   width: 38px;
   cursor: pointer;
-  margin-top: 2px;
+  margin-top: 4px;
 `
 
 const CloseBtn = styled(CloseImg)`
