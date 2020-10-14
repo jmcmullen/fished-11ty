@@ -174,12 +174,21 @@ const StyledP = styled(P)`
 
 const Beta = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+
+  @media screen and (min-width: 796px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 `
 
 const BetaCta = styled.div`
-  margin-top: 1rem;
+  padding: 0 1rem 0.5rem;
+
+  @media screen and (min-width: 796px) {
+    margin-top: 1rem;
+  }
 `
 
 export default function Index({ site, name }) {
