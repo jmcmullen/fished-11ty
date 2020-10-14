@@ -254,7 +254,7 @@ export default function Index({ site, name }) {
             <Details id="early-access">
               <StyledH3>Early access</StyledH3>
               <StyledP>
-                We're currentlly looking for small businesses to join our beta
+                We're currently looking for small businesses to join our beta
                 test and help shape the direction of our product.
               </StyledP>
             </Details>
