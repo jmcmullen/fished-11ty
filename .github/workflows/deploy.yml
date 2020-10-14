@@ -9,6 +9,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+    - name: Build blog
+      run: |
+        yarn && yarn build
     - uses: actions/checkout@master
     - uses: jakejarvis/s3-sync-action@master
       with:
