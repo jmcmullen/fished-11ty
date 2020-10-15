@@ -31,4 +31,4 @@ jobs:
     - name: Deploy Blog
       run: aws s3 sync ./dist s3://blog.fished.io --delete
     - name: Invalidate Cache
-      run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_SECRET_ACCESS_KEY }} --paths '/*'
+      run: aws cloudfront create-invalidation --distribution-id E2URG7QT288XTD --paths '/*'
