@@ -97,6 +97,43 @@ const NavLink = styled(Li)`
   padding: 0 0.5rem;
 `
 
+const MenuLabel = styled.label``
+
+const MobileMenu = styled.ul`
+  position: fixed;
+  right: -100%;
+  top: 0;
+
+  height: 100%;
+  width: 15rem;
+  top: 70px;
+  z-index: 50;
+  background: white;
+`
+
+const MenuCheckbox = styled.input`
+display: none;
+
+~ ${MobileMenu} {
+  display: none;
+}
+
+&:checked ~ ${MobileMenu} {
+  display: block;
+  right: 0;
+}
+
+~ ${MenuLabel} {
+  display: block;
+}
+`
+
+const MobileNavLink = styled(NavLink)`
+  font-size: 1.5rem;
+  padding: 1rem;
+  line-height: 1rem;
+`
+
 export default function Menu({ active }) {
   return (
     <Navbar>
@@ -105,9 +142,24 @@ export default function Menu({ active }) {
       </LogoLink>
       <MobileNav>
           {/* <CloseBtn onClick={handleClick} /> */}
-          <LogoLink href="/blog/" title="Blog" aria-label="Blog">
+          <MenuCheckbox type="checkbox" id="nav-toggle"/>
+          <MenuLabel for="nav-toggle">
             <MenuBtn />
-          </LogoLink>
+          </MenuLabel>
+          <MobileMenu>
+            {sections.map((section, i) => (
+              <MobileNavLink key={i}>
+                <StyledA
+                  title={section.text}
+                  href={section.url}
+                  active={active === section.url}
+                >
+                  <Icon icon={section.icon} />
+                  {!section.noText && section.text}
+                </StyledA>
+              </MobileNavLink>
+            ))}
+          </MobileMenu>
       </MobileNav>
       <DesktopNav inline reset>
         {sections.map((section, i) => (
