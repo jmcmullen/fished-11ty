@@ -107,8 +107,10 @@ export default function Menu({ active }) {
         {isOpen ? (
           <CloseBtn onClick={handleClick} />
         ) : (
-          <MenuBtn onClick={() => setIsOpen(true)} />
-        )}
+            <LogoLink href="/" title="Blog" aria-label="Blog">
+              <MenuBtn href="/blog/" />
+            </LogoLink>
+          )}
       </MobileNav>
       <DesktopNav inline reset>
         {sections.map((section, i) => (
