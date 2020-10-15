@@ -107,8 +107,8 @@ export default function Menu({ active }) {
         {isOpen ? (
           <CloseBtn onClick={handleClick} />
         ) : (
-            <LogoLink href="/" title="Blog" aria-label="Blog">
-              <MenuBtn href="/blog/" />
+            <LogoLink href="/blog/" title="Blog" aria-label="Blog">
+              <MenuBtn />
             </LogoLink>
           )}
       </MobileNav>
