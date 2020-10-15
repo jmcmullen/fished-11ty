@@ -10,8 +10,12 @@ import PostCard from '../PostCard'
 const StyledList = styled(Ul)`
   display: grid;
   grid-gap: ${(props) => props.theme.spaceUnit};
-  grid-template-columns: repeat(auto-fill, minmax(12rem, 15rem));
+  grid-template-columns: repeat(auto-fill,minmax(100%, 15rem));
   padding: 1rem;
+
+  @media screen and (min-width: 600px) {
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 15rem));
+  }
 `
 
 export default function PostList({ posts }) {

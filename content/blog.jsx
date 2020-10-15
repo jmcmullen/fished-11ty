@@ -28,10 +28,11 @@ const Container = styled.div`
   margin-right: auto;
   margin-left: auto;
   position: relative;
-  padding: 4rem 0;
+  padding: 2rem 0;
 
   @media screen and (min-width: 1200px) {
     max-width: 1200px;
+    padding: 4rem 0;
   }
 `
 

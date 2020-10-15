@@ -1,3 +1,1 @@
-document
-  .getElementById("test-button")
-  .addEventListener("click", () => alert("You clicked me"));
+import React from 'react'

@@ -1,18 +1,18 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-import { formatDate } from '../../../components/features/system/utils'
-import DefaultLayout from '../../../components/layout/Default'
-import Head from '../../../components/layout/Head'
-import Article from '../../../components/primitives/Article'
-import Section from '../../../components/primitives/Section'
-import Footer from '../../../components/primitives/Footer'
-import Figure from '../../../components/primitives/Section'
-import Img from '../../../components/primitives/Img'
-import Span from '../../../components/primitives/Span'
-import VerticalSpace from '../../../components/ui/VerticalSpace'
-import withHtml from '../../../components/hoc/withHtml'
-import { postSlug } from '../../../components/features/posts/utils'
+import { formatDate } from "../../../components/features/system/utils";
+import DefaultLayout from "../../../components/layout/Default";
+import Head from "../../../components/layout/Head";
+import Article from "../../../components/primitives/Article";
+import Section from "../../../components/primitives/Section";
+import Footer from "../../../components/primitives/Footer";
+import Figure from "../../../components/primitives/Section";
+import Img from "../../../components/primitives/Img";
+import Span from "../../../components/primitives/Span";
+import VerticalSpace from "../../../components/ui/VerticalSpace";
+import withHtml from "../../../components/hoc/withHtml";
+import { postSlug } from "../../../components/features/posts/utils";
 
 /**
  * A template that renders a page for each post in the post collection (_posts/*.md)
@@ -20,27 +20,36 @@ import { postSlug } from '../../../components/features/posts/utils'
 
 const StyledArticle = styled(Article)`
   max-width: 55ch;
-  margin: 4rem auto;
-`
+  margin: 0 auto;
+
+  @media screen and (min-width: 600px) {
+    padding: 4rem 0;
+  }
+`;
+
 const StyledFigure = styled(Figure)`
-  margin-bottom: calc(${(props) => props.theme.spaceUnit} * 2);
-`
+  margin-bottom: 1rem;
+`;
 
 const StyledFooter = styled(Footer)`
   margin-top: calc(${(props) => props.theme.spaceUnit} * 2);
-`
+`;
 
-const PostBodySection = withHtml(Section)
+const Container = styled.div`
+  margin: 0 1rem 2rem;
+`;
+
+const PostBodySection = withHtml(Section);
 
 export const data = {
   permalink: function (data) {
-    return postSlug(data.page)
+    return postSlug(data.page);
   },
-}
+};
 
 export default function Post(data) {
-  const { site, title, description, content, cover, tags } = data
-  const { date } = data.page
+  const { site, title, description, content, cover, tags } = data;
+  const { date } = data.page;
   return (
     <DefaultLayout
       head={
@@ -60,23 +69,25 @@ export default function Post(data) {
             height="853px"
           />
         </StyledFigure>
-        <PostBodySection>{content}</PostBodySection>
-        <StyledFooter>
-          <Span bold>Published on </Span>
-          {formatDate(date)}
-          {tags?.length && (
-            <>
-              <VerticalSpace />
-              {tags.map((tag, i) => (
-                <Span key={i} italic>
-                  {tag}
-                  {i < tags.length - 1 && ', '}
-                </Span>
-              ))}
-            </>
-          )}
-        </StyledFooter>
+        <Container>
+          <PostBodySection>{content}</PostBodySection>
+          <StyledFooter>
+            <Span bold>Published on </Span>
+            {formatDate(date)}
+            {tags?.length && (
+              <>
+                <VerticalSpace />
+                {tags.map((tag, i) => (
+                  <Span key={i} italic>
+                    {tag}
+                    {i < tags.length - 1 && ", "}
+                  </Span>
+                ))}
+              </>
+            )}
+          </StyledFooter>
+        </Container>
       </StyledArticle>
     </DefaultLayout>
-  )
+  );
 }

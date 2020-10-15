@@ -14,7 +14,7 @@ const StyledHeader = styled(Header)`
   justify-content: center;
   height: 70px;
 
-  @media screen and (min-width: 796px) {
+  @media screen and (min-width: 600px) {
     height: 110px;
   }
 `

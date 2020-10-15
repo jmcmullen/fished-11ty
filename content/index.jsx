@@ -47,7 +47,7 @@ const Hero = styled.div`
   padding: calc(${(props) => props.theme.spaceUnit});
   background-color: ${(props) => props.theme.colors.grey200};
 
-  @media screen and (min-width: 796px) {
+  @media screen and (min-width: 600px) {
     width: 75%;
     padding-right: 8rem;
     min-height: calc(100vh - 300px);
@@ -65,7 +65,7 @@ const HeroBg = styled.div`
   z-index: -1;
   transform: translateX(-50%);
 
-  @media screen and (min-width: 796px) {
+  @media screen and (min-width: 600px) {
     display: block;
   }
 `
@@ -74,7 +74,7 @@ const Features = styled.div`
   background-color: ${(props) => props.theme.colors.grey300};
   width: 100%;
 
-  @media screen and (min-width: 796px) {
+  @media screen and (min-width: 600px) {
     top: 0;
     right: 0;
     height: calc(100vh - 400px);
@@ -90,7 +90,7 @@ const StyledH2 = styled(H2)`
   font-size: 3rem;
   margin: 2rem 0;
 
-  @media screen and (min-width: 796px) {
+  @media screen and (min-width: 600px) {
     margin-top: 3rem;
     font-size: 4.2rem;
   }
@@ -98,17 +98,10 @@ const StyledH2 = styled(H2)`
 
 const StyledH3 = styled(H3)`
   margin: calc(${(props) => props.theme.spaceUnit} * 2) 0;
+  font-size: 2rem;
 
-  @media screen and (min-width: 796px) {
+  @media screen and (min-width: 600px) {
     font-size: 3rem;
-  }
-`
-
-const StyledH4 = styled(H4)`
-  margin: calc(${(props) => props.theme.spaceUnit} * 2) 0;
-
-  @media screen and (min-width: 796px) {
-    font-size: 2rem;
   }
 `
 
@@ -116,14 +109,14 @@ const CtaBtn = styled(A)`
   display: block;
   font-size: 1.4rem;
   width: 100%;
-  padding: 0.5rem;
+  padding: 1rem;
   margin: calc(${(props) => props.theme.spaceUnit} * 2) 0;
   background: black;
   text-align: center;
   color: ${(props) => props.theme.colors.white};
   cursor: pointer;
 
-  @media screen and (min-width: 796px) {
+  @media screen and (min-width: 600px) {
     padding: 1rem 2rem;
     width: 300px;
   }
@@ -132,7 +125,7 @@ const CtaBtn = styled(A)`
 const Details = styled.div`
   margin: 2rem 1rem;
 
-  @media screen and (min-width: 796px) {
+  @media screen and (min-width: 600px) {
     padding: 3rem 0;
   }
 `
@@ -140,7 +133,7 @@ const Details = styled.div`
 const Step = styled.div`
   margin: 2rem 0 4rem;
 
-  @media screen and (min-width: 796px) {
+  @media screen and (min-width: 600px) {
     margin: 2rem 2.5rem 4rem 0;
   }
 `
@@ -158,7 +151,7 @@ const Row = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media screen and (min-width: 796px) {
+  @media screen and (min-width: 600px) {
     flex-direction: row;
   }
 `
@@ -176,7 +169,7 @@ const Beta = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media screen and (min-width: 796px) {
+  @media screen and (min-width: 600px) {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -186,7 +179,7 @@ const Beta = styled.div`
 const BetaCta = styled.div`
   padding: 0 1rem 0.5rem;
 
-  @media screen and (min-width: 796px) {
+  @media screen and (min-width: 600px) {
     margin-top: 1rem;
   }
 `

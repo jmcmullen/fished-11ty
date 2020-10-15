@@ -98,8 +98,6 @@ const NavLink = styled(Li)`
 `
 
 export default function Menu({ active }) {
-  const [isOpen, setIsOpen] = React.useState(false)
-
   return (
     <Navbar>
       <LogoLink href="/" title="Homepage" aria-label="Homepage">
@@ -107,7 +105,7 @@ export default function Menu({ active }) {
       </LogoLink>
       <MobileNav>
         {isOpen ? (
-          <CloseBtn onClick={() => setIsOpen(false)} />
+          <CloseBtn onClick={handleClick} />
         ) : (
           <MenuBtn onClick={() => setIsOpen(true)} />
         )}
