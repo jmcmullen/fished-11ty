@@ -104,13 +104,10 @@ export default function Menu({ active }) {
         <Logo />
       </LogoLink>
       <MobileNav>
-        {isOpen ? (
-          <CloseBtn onClick={handleClick} />
-        ) : (
-            <LogoLink href="/blog/" title="Blog" aria-label="Blog">
-              <MenuBtn />
-            </LogoLink>
-          )}
+          {/* <CloseBtn onClick={handleClick} /> */}
+          <LogoLink href="/blog/" title="Blog" aria-label="Blog">
+            <MenuBtn />
+          </LogoLink>
       </MobileNav>
       <DesktopNav inline reset>
         {sections.map((section, i) => (
