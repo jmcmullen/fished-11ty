@@ -1,34 +1,69 @@
 {
-  "name": "blog",
-  "description": "Use React components in Eleventy",
+  "name": "my-blog",
+  "version": "1.0.0",
+  "description": "My blog",
   "scripts": {
-    "dev": "ELEVENTY_EXPERIMENTAL=true eleventy --serve",
-    "build": "ELEVENTY_EXPERIMENTAL=true eleventy",
-    "release": "release-it"
+    "build-dev:webpack": "webpack",
+    "watch:webpack": "webpack --watch",
+    "watch:eleventy": "cross-env ELEVENTY_ENV=development eleventy --serve",
+    "dev": "npm-run-all clean build-dev:webpack --parallel watch:*",
+    "build:webpack": "cross-env NODE_ENV=production webpack --mode production",
+    "build:eleventy": "cross-env ELEVENTY_ENV=production eleventy",
+    "build": "run-s clean build:*",
+    "serve:local": "serve _site",
+    "serve": "run-s build serve:local",
+    "clean": "rimraf _site",
+    "format:js": "prettier '**/*.js' --write && eslint '**/*.js' --fix",
+    "format:json": "prettier '**/*.json' --write",
+    "format": "run-s format:*",
+    "lint": "eslint --ext .js ."
   },
+  "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
-    "@babel/core": "^7.11.6",
-    "@babel/plugin-proposal-optional-chaining": "^7.11.0",
-    "@babel/preset-react": "^7.10.4",
-    "@storybook/addon-actions": "^6.0.22",
-    "@storybook/addon-essentials": "^6.0.22",
-    "@storybook/addon-links": "^6.0.22",
-    "@storybook/react": "^6.0.22",
-    "@svgr/webpack": "^5.4.0",
-    "babel-loader": "^8.1.0",
-    "cheerio": "^1.0.0-rc.3",
-    "core-js": "^3.6.5",
-    "dayjs": "^1.9.1",
-    "faker": "^5.1.0",
-    "fast-glob": "^3.2.4",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-is": "^16.13.1",
-    "release-it": "^13.7.1",
-    "styled-components": "^5.2.0",
-    "webpack": "^4.44.2"
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "autoprefixer": "^9.8.6",
+    "copy-webpack-plugin": "^6.0.3",
+    "cross-env": "^7.0.2",
+    "css-loader": "^4.2.1",
+    "cssnano": "^4.1.10",
+    "date-fns": "^2.15.0",
+    "eleventy-plugin-lazyimages": "^2.0.1",
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "file-loader": "^6.0.0",
+    "glob": "^7.1.6",
+    "html-minifier": "^4.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "husky": "^4.2.5",
+    "image-webpack-loader": "^6.0.0",
+    "lint-staged": "^10.2.11",
+    "mini-css-extract-plugin": "^0.9.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.1.8",
+    "postcss-loader": "^4.1.0",
+    "prettier": "^2.1.2",
+    "rimraf": "^3.0.2",
+    "serve": "^11.3.2",
+    "tailwindcss": "^2.0.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-fix-style-only-entries": "^0.5.1"
   },
-  "dependencies": {},
-  "version": "0.2.2"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "eslint"
+    ],
+    "*.json": [
+      "prettier --write"
+    ]
+  }
 }

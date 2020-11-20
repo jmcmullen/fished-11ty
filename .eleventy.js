@@ -1,63 +1,48 @@
-const path = require("path");
-const config = require("./react/config");
-const { getBundleFromInputPath } = require("./react/utils");
-const { pages } = require("./react/findSources");
-const build = require("./react/build");
-const render = require("./react/render");
-const markdownEngine = require("./react/markdownEngine");
+const htmlmin = require('html-minifier');
+const dateFns = require('date-fns');
+const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addWatchTarget("./components"); // we avoid to build components, but we wanna watch them for hot reloading
-  eleventyConfig.addWatchTarget("./theme");
-  eleventyConfig.addTemplateFormats("jsx");
-  eleventyConfig.addPassthroughCopy(`${config.inputDir}/js`);
-  eleventyConfig.addPassthroughCopy(`${config.inputDir}/img`);
-  eleventyConfig.addExtension("jsx", {
-    read: false,
-    data: true,
-    getData: true,
-    getInstanceFromInputPath: async (inputPath) => {
-      try {
-        const bundle = getBundleFromInputPath(inputPath);
-        return require(bundle);
-      } catch (err) {
-        throw new Error(err);
+  eleventyConfig.addPlugin(syntaxHighlight);
+
+  eleventyConfig.addPlugin(lazyImagesPlugin, {
+    transformImgPath: (imgPath) => {
+      if (imgPath.startsWith('http://') || imgPath.startsWith('https://')) {
+        // Handle remote file
+        return imgPath;
+      } else {
+        return `./src/${imgPath}`;
       }
-    },
-    init: async () => {
-      try {
-        const PAGES = await pages();
-        await build(PAGES);
-      } catch (err) {
-        throw new Error(err);
-      }
-    },
-    compile: (permalink, inputPath) => {
-      return async (data) => {
-        try {
-          return render(permalink, inputPath, data);
-        } catch (err) {
-          throw new Error(err);
-        }
-      };
     },
   });
 
-  eleventyConfig.setLibrary("md", markdownEngine);
+  eleventyConfig.setEjsOptions({
+    rmWhitespace: true,
+    context: {
+      dateFns,
+    },
+  });
 
-  eleventyConfig.addCollection("posts", function (collectionApi) {
-    return collectionApi
-      .getFilteredByGlob(path.join(config.inputDir, "_posts/*.md"))
-      .sort(function (a, b) {
-        return b.date - a.date;
+  eleventyConfig.setBrowserSyncConfig({
+    files: './_site/assets/styles/main.css',
+  });
+
+  eleventyConfig.addTransform('htmlmin', (content, outputPath) => {
+    if (outputPath.endsWith('.html')) {
+      const minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+        minifyJS: true,
       });
+      return minified;
+    }
+
+    return content;
   });
 
   return {
-    dir: {
-      input: config.inputDir, // we watch only this jsx files, not components
-      output: "dist"
-    },
-    markdownTemplateEngine: "jsx", // parse markdown file with jsx template engine
+    dir: { input: 'src', output: '_site', data: '_data' },
   };
 };

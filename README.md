@@ -1,229 +1,147 @@
-# eleventy-react
+# Eleventy Starter Boilerplate
 
-> Use [React](https://reactjs.org/) components in [Eleventy](https://www.11ty.dev/).
+<p align="center">
+  <a href="https://creativedesignsguru.com/demo/Eleventy-Starter-Boilerplate/eleventy-starter-boilerplate-presentation/"><img src="public/assets/images/eleventy-js-starter-boilerplate.png?raw=true" alt="Eleventy starter banner"></a>
+</p>
 
-## Demo
+🚀 Eleventy Starter Boilerplate is production-ready with SEO-friendly for quickly starting a blog. ⚡️ Built with [Eleventy](https://www.11ty.dev), [ESLint](https://eslint.org), [Prettier](https://prettier.io), [Webpack](https://webpack.js.org), [PostCSS](https://postcss.org), [Tailwind CSS](https://tailwindcss.com) and [Netlify CMS](https://www.netlifycms.org) (optional).
 
-[https://eleventy-react.netlify.app/](https://eleventy-react.netlify.app/)
+Clone this project and use it to create your own [Eleventy](https://www.11ty.dev) blog. You can check a [Eleventy templates demo](https://creativedesignsguru.com/demo/Eleventy-Starter-Boilerplate/eleventy-starter-boilerplate-presentation/).
 
-## Why
+### Features
 
-Eleventy is a great static site generator, but I don’t like template engines.
-They introduce a lot of custom syntax, and it’s almost impossibile to convert them to a component-based dev flow.
+Production-ready in mind:
 
-## Installation
+- 🔥 [11ty](https://www.11ty.dev) for Static Site Generator
+- 🎨 Integrate with [Tailwind CSS](https://tailwindcss.com) (with [PurgeCSS](https://purgecss.com), remove unused CSS)
+- 💅 [PostCSS](https://postcss.org) for processing [Tailwind CSS](https://tailwindcss.com)
+- ⚡️ Lazy load images with [lazysizes](https://github.com/aFarkas/lazysizes)
+- ✨ Compress image with [Imagemin](https://github.com/imagemin/imagemin)
+- 🎈 Syntax Highlighting with [Prism.js](https://prismjs.com)
+- ☕ Minify HTML & CSS with [HTMLMinifier](https://www.npmjs.com/package/html-minifier) and [cssnano](https://cssnano.co)
+- ✏️ Linter with [ESLint](https://eslint.org)
+- 🛠 Code Formatter with [Prettier](https://prettier.io)
+- 💨 Live reload
+- 📦 Module Bundler with [Webpack](https://webpack.js.org)
+- 🦊 Templating with [EJS](https://ejs.co)
+- 🤖 SEO metadata and [Open Graph](https://ogp.me/) tags
+- ⚙️ [JSON-LD](https://developers.google.com/search/docs/guides/intro-structured-data) for richer indexing
+- 🗺 Sitemap.xml
+- ⚠️ 404 page
+- 📖 Pagination
+- ✅ Cache busting
+- 💯 Maximize lighthouse score
+- 🌈 Include a FREE minimalist blog theme
+- 🗒 Netlify CMS (optional)
 
-### 1. Clone or download the repository
+### Philosophy
 
-```shell
-git clone git@github.com:signalkuppe/eleventy-react.git eleventy-react
+- Minimal code (HTML, CSS & JS). Add what you need
+- SEO-friendly
+- 🚀 Production-ready
+
+### Requirements
+
+- Node.js and npm
+
+### Premium Themes ([Eleventy Themes](https://creativedesignsguru.com/category/eleventy/))
+
+| [Blue Dark Eleventy Theme](https://creativedesignsguru.com/blue-dark-eleventy-theme/) | [Blue Eclatant Eleventy Theme](https://creativedesignsguru.com/blue-eclatant-eleventy-theme/) |
+| --- | --- |
+| [![Blue Dark Eleventy Theme premium](https://creativedesignsguru.com/assets/images/themes/blue-dark-mode-eleventy-theme-homepage-xs.png)](https://creativedesignsguru.com/blue-dark-eleventy-theme/) | [![Blue Eclatant Eleventy Theme premium](https://creativedesignsguru.com/assets/images/themes/eclatant-blue-eleventy-theme-homepage-xs.png)](https://creativedesignsguru.com/blue-eclatant-eleventy-theme/) |
+
+| [Blue Modern Eleventy Theme](https://creativedesignsguru.com/blue-modern-eleventy-theme/) | [Blue Minimalist Eleventy Theme](https://creativedesignsguru.com/blue-minimalist-eleventy-theme/) |
+| --- | --- |
+| [![Blue Modern Eleventy Theme premium](https://creativedesignsguru.com/assets/images/themes/modern-blue-eleventy-theme-homepage-xs.png)](https://creativedesignsguru.com/blue-modern-eleventy-theme/) | [![Blue Minimalist Eleventy Theme premium](https://creativedesignsguru.com/assets/images/themes/minimalist-blue-eleventy-theme-homepage-xs.png)](https://creativedesignsguru.com/blue-minimalist-eleventy-theme/) |
+
+### Getting started
+
+Run the following command on your local environment:
+
 ```
-
-### 2. Go to the working directory
-
-```shell
-cd eleventy-react
-```
-
-### 3. Install the project dependencies
-
-```shell
+git clone --depth=1 https://github.com/ixartz/Eleventy-Starter-Boilerplate.git my-project-name
+cd my-project-name
 npm install
-
 ```
 
-### 3. Run development mode
+Then, you can run locally in development mode with live reload:
 
-```shell
+```
 npm run dev
 ```
 
-Build you site for deploy
+Open http://localhost:8080 with your favorite browser to see your blog.
 
-```shell
+### Project structure
+
+```
+.
+├── public             # Static files
+│   └── assets
+│       └── images     # Images not needed by Webpack
+└── src
+    ├── _data          # Eleventy data folder
+    ├── _includes
+    │   └── layouts    # HTML layout files
+    ├── assets         # Assets folder that needs to be processed by Webpack
+    │   ├── images
+    │   │   └── posts  # Images used in your blog posts (will be compressed by Webpack)
+    │   └── styles     # Your blog CSS files
+    └── posts          # Your blog posts
+```
+
+### Customization
+
+You can easily configure Eleventy Starter Boilerplate. Please change the following file:
+
+- `public/assets/images/logo.png`: your blog logo
+- `public/apple-touch-icon.png`, `public/favicon.ico`, `public/favicon-16x16.png` and `public/favicon-32x32.png`: your blog favicon, you can generate from https://favicon.io/favicon-converter/
+- `src/_data/site.json`: your blog configuration
+- `src/_includes/layouts`: your blog HTML layout
+- `src/assets/styles/main.css`: your blog CSS file using Tailwind CSS
+
+### Deploy to production
+
+You can see the results locally in production mode with:
+
+```
+npm run serve
+```
+
+The generated HTML and CSS files are minified. It will also removed unused CSS from [Tailwind CSS](https://tailwindcss.com).
+
+You can create an optimized production build with:
+
+```
 npm run build
 ```
 
-## Features
+Now, your blog is ready to be deployed. All generated files are located at `_site` folder, which you can deploy with any hosting service.
 
-### Integration with data file and custom template data
+### Deploy to Netlify
 
-just add a `data export` to your jsx file
+Clone this repository on own GitHub account and deploy to Netlify:
 
-```js
-import React from "react";
-import DefaultLayout from "../components/layout/Default";
-import P from "../components/primitives/P";
-import Span from "../components/primitives/Span";
-import H1 from "../components/primitives/H1";
+[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ixartz/Eleventy-Starter-Boilerplate&stack=cms)
 
-// custom template data
-export const data = {
-  name: "John Doe",
-};
+### Remove Netlify files and Netlify CMS
 
-export default function Index({ site, name }) {
-  // site comes from site.js data file in _data
-  const { title } = site;
+If you don't use Netlify, you can easily remove all Netlify related files:
 
-  return (
-    <DefaultLayout>
-      <H1>{title}</H1>
-      <P>
-        This name is from custom template data: <Span bold>{name}</Span>
-      </P>
-    </DefaultLayout>
-  );
-}
-```
+- `public/admin`, the entier folder
+- `src/_includes/layouts/base.ejs`, the loaded script `netlify-identity-widget.js` and the inline script `if (window.netlifyIdentity) { ...`
+- `netlify.toml`, the entire file
 
-### Support for pagination: you can generate pages from data
+### Contributions
 
-```js
-import React from "react";
-import { slug } from "./utils/user";
-import DefaultLayout from "../components/layout/Default";
-import H1 from "../components/primitives/H1";
+Everyone is welcome to contribute to this project. Feel free to open an issue if you have question or found a bug.
 
-/**
- * A template that renders a page for each user in the users collection
- */
+### License
 
-export const data = {
-  pagination: {
-    data: "users",
-    size: 1,
-    alias: "user",
-  },
-  permalink: function (data) {
-    return slug(data.user);
-  },
-};
+Licensed under the MIT License, Copyright © 2020
 
-export default function User({ site, user }) {
-  return (
-    <DefaultLayout>
-      <H1>{user.name}</H1>
-    </DefaultLayout>
-  );
-}
-```
+See [LICENSE](LICENSE) for more information.
 
-### Support for markdown content
+---
 
-Write your content in markdown format, and use .jsx files as layouts
-
-`_includes/layouts/post.jsx`
-
-```js
-import React from "react";
-import DefaultLayout from "../../../components/layout/Default";
-import Section from "../../../components/primitives/Section";
-import Img from "../../../components/primitives/Img";
-import Span from "../../../components/primitives/Span";
-import VerticalSpace from "../../../components/ui/VerticalSpace";
-import withHtml from "../../../components/hoc/withHtml";
-import { postSlug } from "../../../components/features/posts/utils";
-
-/**
- * A template that renders a page for each post in the post collection (_posts/*.md)
- */
-
-const PostBodySection = withHtml(Section);
-
-export const data = {
-  permalink: function (data) {
-    return postSlug(data.page);
-  },
-};
-
-export default function Post(data) {
-  const { title, content, cover, tags } = data;
-  return (
-    <DefaultLayout>
-      <Img src={cover} alt={title} />
-      <PostBodySection>{content}</PostBodySection>
-      {tags?.length && (
-        <>
-          <VerticalSpace />
-          {tags.map((tag, i) => (
-            <Span key={i} italic>
-              {tag}
-              {i < tags.length - 1 && ", "}
-            </Span>
-          ))}
-        </>
-      )}
-    </DefaultLayout>
-  );
-}
-```
-
-### Integration with styled components
-
-styles are extracted and inserted into the `<head>` tag
-
-```js
-import React from "react";
-import styled from "styled-components";
-
-const StyledText = styled.span`
-  font-weight: ${(props) => {
-    if (props.bold) {
-      return 700;
-    } else {
-      return 400;
-    }
-  }};
-`;
-
-export default function Span({ children, ...props }) {
-  return <StyledText {...props}>{children}</StyledText>;
-}
-```
-
-### Integration with [storybook](https://storybook.js.org/)
-
-Develop your UI in isolation adding stories for your components and run storybook with
-
-```shell
-npm run storybook
-```
-
-Build storybook inside eleventy’s \_site folder
-
-```shell
-npm run build-storybook
-```
-
-stories are written in [.mdx](https://storybook.js.org/docs/react/writing-docs/mdx) format
-
-### Some basic scaffolding included
-
-basic ui/primitives/features components included to give an idea of the approach
-
-### Inline svg parser included
-
-import and use inline svgs in your react components
-
-### Babel plugins included
-
-- @babel/plugin-proposal-optional-chaining
-
-## Notes
-
-React is not included in the build, so you can use any js approach on the client
-I think that adding hydration would go against Eleventy’s philosophy
-
-## TODO
-
-- reduce storybook bundle site for production build
-- test other eleventy’s features
-- use React components in \_data files
-- use React components for primitives in markdown parser
-
-## Warnings
-
-_⚠️ very much a work in progress_
-
-Requires experimental features in Eleventy, specifically: [Custom File Extension Handlers feature from Eleventy](https://github.com/11ty/eleventy/issues/117)
+Made with ♥ by [CreativeDesignsGuru](https://creativedesignsguru.com)
