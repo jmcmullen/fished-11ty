@@ -80,3 +80,7 @@
 .btn {
   @apply p-6 text-2xl underline bg-black text-center text-white cursor-pointer;
 }
+
+.btn-sm {
+  @apply text-xl;
+}
