@@ -19,6 +19,16 @@
     />
     <meta property="og:locale" content="<%= site.locale %>" />
     <meta property="og:site_name" content="<%= site.site_name %>" />
+    <meta property="og:url" content="https://fished.io" />
+    <meta property="og:image" content="https://fished.io/opengraph.png" />
+    <meta name="twitter:title" content="<%= title %>" />
+    <meta
+      name="twitter:description"
+      content="<%= (!!locals.description) ? description : site.description %>"
+    />
+    <meta name="twitter:image" content="https://fished.io/opengraph.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <% if (locals.tags == "posts") { %>
     <meta property="og:type" content="article" />
     <meta property="article:published_time" content="<%= date.toISOString() %>" />
@@ -45,20 +55,7 @@
         "@context": "http://schema.org"
       }
     </script>
-    <% } %><%- include('webpack.ejs') %> <% if (page.url == "/") { %>
-    <script defer="true" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on('init', (user) => {
-          if (!user) {
-            window.netlifyIdentity.on('login', () => {
-              document.location.href = '/admin/';
-            });
-          }
-        });
-      }
-    </script>
-    <% } %>
+    <% } %><%- include('webpack.ejs') %>
 
     <script>
       !(function () {
