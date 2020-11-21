@@ -20,7 +20,7 @@
     />
     <meta property="og:locale" content="<%= site.locale %>" />
     <meta property="og:site_name" content="<%= site.site_name %>" />
-    <meta property="og:url" content="https://fished.io/" />
+    <meta property="og:url" content="https://fished.io/<%= permalink %>" />
     <meta property="og:image" content="https://fished.io/opengraph.png" />
     <meta name="twitter:title" content="<%= title %>" />
     <meta
@@ -56,6 +56,8 @@
         "@context": "http://schema.org"
       }
     </script>
+    <% } else %>
+    <meta property="og:type" content="website" />
     <% } %><%- include('webpack.ejs') %>
 
     <script>
