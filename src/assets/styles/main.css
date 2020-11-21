@@ -12,6 +12,10 @@
   min-height: calc(100vh - 512px);
 }
 
+.content a {
+  @apply text-indigo-700 hover:text-indigo-600 underline transition-colors;
+}
+
 .content {
   @apply tracking-wider leading-8 text-xl;
 }
