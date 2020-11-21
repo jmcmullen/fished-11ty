@@ -4,6 +4,14 @@
 
 @tailwind utilities;
 
+#menu-toggle:checked + #menu {
+  display: block;
+}
+
+#content {
+  min-height: calc(100vh - 512px);
+}
+
 .content {
   @apply tracking-wider leading-8 text-xl;
 }
