@@ -12,4 +12,11 @@
 [[redirects]]
   from = "/"
   to = "/admin/"
+  force = true
+  status = 301
+
+[[redirects]]
+  from = "/*"
+  to = "/admin/"
+  force = true
   status = 301
