@@ -13,7 +13,7 @@
 }
 
 .content a {
-  @apply text-indigo-700 hover:text-indigo-600 underline transition-colors;
+  @apply text-blue-700 hover:text-blue-600 underline transition-colors;
 }
 
 .content {
