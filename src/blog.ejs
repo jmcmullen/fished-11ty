@@ -7,6 +7,7 @@ pagination:
   permalink: '<% if (pagination.pageNumber > 0) { %><%= `page${pagination.pageNumber + 1}/blog.html` %><% } else { %>blog.html<% } %>'
 eleventyComputed:
   title: '<% if (pagination.pageNumber > 0) { %><%= `Page ${pagination.pageNumber + 1} - Blog Posts` %><% } else { %>Blog Posts<% } %>'
+  description: 'Learn about phishing attacks and cyber security in general via our blog. Stay up to date for tips and tricks to protect your self online. Browse now to learn more'
 ---
 
 <section class="w-full max-w-screen-xl mx-auto px-6">
