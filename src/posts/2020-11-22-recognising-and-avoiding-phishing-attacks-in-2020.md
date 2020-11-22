@@ -1,7 +1,7 @@
 ---
 title: Recognising and Avoiding Phishing Attacks In 2020
-description: Phishing attack prevention in 2020. Specifically, we’ll discuss how
-  to identify and avoid phishing scams.
+description: What you need to know about phishing attack prevention in 2020.
+  Specifically, we’ll discuss how to identify and avoid phishing scams.
 date: 2020-11-23T04:16:38.671Z
 ---
 Keeping your information secure is a hot topic in 2020. It seems like both individuals and companies are worried about their personal information these days. 
