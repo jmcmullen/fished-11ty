@@ -12,7 +12,7 @@ To help our readers, we have created this article where we’ll discuss the most
 
 ## Basics of Phishing Attacks
 
-Phishing is a type of social engineering attack done for the aim of stealing users’ data e.g. passwords, credit card numbers, etc.
+Phishing is a type of social engineering attack done for the aim of stealing user data e.g. passwords, credit card numbers, etc.
 
 If you have ever received a suspicious email or text message, the chances are you have already encountered phishing attacks. It can also be in the form of a website that has been designed to impersonate a real person or organization. Unfortunately for those people who follow the links given in these spam messages or emails lead to:
 
