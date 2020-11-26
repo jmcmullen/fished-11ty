@@ -90,7 +90,7 @@
 }
 
 .content img {
-  @apply shadow-sm;
+  @apply w-full shadow;
 }
 
 .btn {
