@@ -89,6 +89,10 @@
   @apply bg-gray-100;
 }
 
+.content img {
+  @apply shadow-sm;
+}
+
 .btn {
   @apply p-6 text-2xl underline bg-black text-center text-white cursor-pointer;
 }
