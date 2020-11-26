@@ -15,6 +15,8 @@ The most common way of phishing attack that hackers have adapted is that they us
 
 Here's a template we offer to protect your business from Zoom related phishing attempts:
 
+
+
 ![Zoom phishing email template](/assets/images/posts/step-2.png "Create a zoom phishing email training test with fished.io")
 
 
