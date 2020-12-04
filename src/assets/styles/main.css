@@ -9,6 +9,7 @@
 }
 
 #content {
+  @apply overflow-x-hidden;
   min-height: calc(100vh - 512px);
 }
 
