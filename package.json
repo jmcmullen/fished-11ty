@@ -65,5 +65,10 @@
     "*.json": [
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "plyr": "^3.6.3",
+    "tailwindcss-aspect-ratio": "^3.0.0",
+    "tailwindcss-responsive-embed": "^1.0.0"
   }
 }
