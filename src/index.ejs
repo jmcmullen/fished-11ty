@@ -36,7 +36,7 @@ permalink: 'index.html'
       <iframe
         class="embed-responsive-item bg-gray-900"
         title="Explainer Video - Fished.io"
-        src="https://player.vimeo.com/video/498615042"
+        data-src="https://player.vimeo.com/video/498615042"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe>
@@ -326,3 +326,15 @@ permalink: 'index.html'
     </div>
   </div>
 </section>
+
+<script>
+  function init() {
+    var vidDefer = document.getElementsByTagName('iframe');
+    for (var i = 0; i < vidDefer.length; i++) {
+      if (vidDefer[i].getAttribute('data-src')) {
+        vidDefer[i].setAttribute('src', vidDefer[i].getAttribute('data-src'));
+      }
+    }
+  }
+  window.onload = init;
+</script>
