@@ -22,7 +22,7 @@ permalink: 'index.html'
         Our cyber security awareness testing and training is the most effective way to beat phishing
         attacks against your company.
       </p>
-      <a class="font-medium block btn lg:w-72" href="https://app.fished.io/sign-up">Try for free</a>
+      <a class="font-medium block btn lg:w-72" href="https://app.1f.io/sign-up">Try for free</a>
     </div>
     <div
       class="hidden lg:block p-6 bg-gradient-to-b from-blue-200 via-blue-100 to-blue-50 lg:h-full lg:absolute lg:top-0 lg:w-full transform -translate-x-1/2"
@@ -35,7 +35,7 @@ permalink: 'index.html'
     <div class="embed-responsive aspect-ratio-16/9">
       <iframe
         class="embed-responsive-item bg-gray-900"
-        title="Explainer Video - Fished.io"
+        title="Explainer Video - 1F.io"
         data-src="https://player.vimeo.com/video/498615042"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
@@ -328,12 +328,16 @@ permalink: 'index.html'
 </section>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var vidDefer = document.getElementsByTagName('iframe');
-    for (var i = 0; i < vidDefer.length; i++) {
-      if (vidDefer[i].getAttribute('data-src')) {
-        vidDefer[i].setAttribute('src', vidDefer[i].getAttribute('data-src'));
+  document.addEventListener(
+    'DOMContentLoaded',
+    function () {
+      var vidDefer = document.getElementsByTagName('iframe');
+      for (var i = 0; i < vidDefer.length; i++) {
+        if (vidDefer[i].getAttribute('data-src')) {
+          vidDefer[i].setAttribute('src', vidDefer[i].getAttribute('data-src'));
+        }
       }
-    }
-  }, false);
+    },
+    false
+  );
 </script>
