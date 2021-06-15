@@ -6,7 +6,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="icon" href="/favicon.ico" />
-    <title><%= title %> - 1F</title>
+    <title><%= title %> - Fished</title>
     <meta
       name="description"
       content="<%= (!!locals.description) ? description : site.description %>"
@@ -19,14 +19,14 @@
     />
     <meta property="og:locale" content="<%= site.locale %>" />
     <meta property="og:site_name" content="<%= site.site_name %>" />
-    <meta property="og:url" content="https://1f.io/" />
-    <meta property="og:image" content="https://1f.io/opengraph.png" />
+    <meta property="og:url" content="https://fished.io/" />
+    <meta property="og:image" content="https://fished.io/opengraph.png" />
     <meta name="twitter:title" content="<%= title %>" />
     <meta
       name="twitter:description"
       content="<%= (!!locals.description) ? description : site.description %>"
     />
-    <meta name="twitter:image" content="https://1f.io/opengraph.png" />
+    <meta name="twitter:image" content="https://fished.io/opengraph.png" />
     <meta name="twitter:card" content="summary_large_image" />
 
     <% if (locals.tags == "posts") { %>
@@ -42,7 +42,7 @@
           "@type": "Organization",
           "logo": {
             "@type": "ImageObject",
-            "url": "<%= `${site.url}/assets/images/logo.png` %>"
+            "url": "<%= `${site.url}/assets/images/logo.svg` %>"
           },
           "name": "<%= site.author %>"
         },
@@ -123,7 +123,7 @@
       <div class="px-6 w-full max-w-screen-xl mx-auto flex flex-wrap items-center">
         <div class="h-20 lg:h-32 flex-1 flex justify-between items-center">
           <a href="/">
-            <img src="/assets/images/logo.png" alt="1F Logo" class="w-20" />
+            <img src="/assets/images/logo.svg" alt="Fished Logo" class="w-36" />
           </a>
         </div>
 
@@ -173,7 +173,7 @@
             <li class="py-4 lg:px-4">
               <a
                 class="px-0 block text-gray-700 font-medium border-b-2 border-transparent hover:text-black lg:hover:border-black transition-colors ease-in duration-200"
-                href="https://app.1f.io/log-in"
+                href="https://app.fished.io/log-in"
               >
                 Log in
               </a>
@@ -181,7 +181,7 @@
             <li class="py-4 lg:pl-4">
               <a
                 class="px-0 block text-black font-medium border-b-2 border-transparent hover:text-black lg:hover:border-black transition-colors ease-in duration-200"
-                href="https://app.1f.io/sign-up"
+                href="https://app.fished.io/sign-up"
               >
                 Try for free
               </a>
@@ -204,7 +204,7 @@
             </p>
           </div>
           <div class="lg:mt-4">
-            <a class="font-medium block btn lg:w-72" href="https://app.1f.io/sign-up">
+            <a class="font-medium block btn lg:w-72" href="https://app.fished.io/sign-up">
               Try for free
             </a>
           </div>
@@ -235,7 +235,7 @@
         </ul>
         <div class="my-6">
           <a href="/">
-            <img src="/assets/images/logo.png" alt="1F Logo" class="w-20" />
+            <img src="/assets/images/logo.svg" alt="Fished Logo" class="w-36" />
           </a>
         </div>
       </div>

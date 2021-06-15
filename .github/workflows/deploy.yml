@@ -29,6 +29,6 @@ jobs:
         run: |
           yarn && yarn build
       - name: Deploy Blog
-        run: aws s3 sync ./_site s3://blog.1f.io --delete
+        run: aws s3 sync ./_site s3://blog.fished.io --delete
       - name: Invalidate Cache
         run: aws cloudfront create-invalidation --distribution-id E2URG7QT288XTD --paths '/*'
