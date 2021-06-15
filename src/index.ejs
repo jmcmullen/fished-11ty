@@ -328,6 +328,7 @@ permalink: 'index.html'
 </section>
 
 <script>
+<<<<<<< HEAD
   document.addEventListener(
     'DOMContentLoaded',
     function () {
@@ -340,4 +341,15 @@ permalink: 'index.html'
     },
     false
   );
+=======
+  function init() {
+    var vidDefer = document.getElementsByTagName('iframe');
+    for (var i = 0; i < vidDefer.length; i++) {
+      if (vidDefer[i].getAttribute('data-src')) {
+        vidDefer[i].setAttribute('src', vidDefer[i].getAttribute('data-src'));
+      }
+    }
+  }
+  window.onload = init;
+>>>>>>> parent of 0f77916 (on dom load)
 </script>
