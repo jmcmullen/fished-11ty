@@ -8,15 +8,3 @@
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     X-Robots-Tag = "noindex" 
-
-[[redirects]]
-  from = "/"
-  to = "/admin/"
-  force = true
-  status = 301
-
-[[redirects]]
-  from = "/*"
-  to = "/admin/"
-  force = true
-  status = 301
