@@ -4,7 +4,8 @@ description: What you need to know about phishing attack prevention in 2020.
   Specifically, we’ll discuss how to identify and avoid phishing scams.
 date: 2020-11-23T04:16:38.671Z
 ---
-Keeping your information secure is a hot topic in 2020. It seems like both individuals and companies are worried about their personal information these days. 
+
+Keeping your information secure is a hot topic in 2020. It seems like both individuals and companies are worried about their personal information these days.
 
 Each year people are losing millions of dollars in phishing scams. It’s high time that we learn about these scams and save our hard-earned money.
 
@@ -16,9 +17,9 @@ Phishing is a type of social engineering attack done for the aim of stealing use
 
 If you have ever received a suspicious email or text message, the chances are you have already encountered phishing attacks. It can also be in the form of a website that has been designed to impersonate a real person or organization. Unfortunately for those people who follow the links given in these spam messages or emails lead to:
 
-* the installation of malware in their system,
-* the freezing of the system as part of a ransomware attack,
-* or the revealing of sensitive information.
+- the installation of malware in their system,
+- the freezing of the system as part of a ransomware attack,
+- or the revealing of sensitive information.
 
 Both individuals and companies are prone to these phishing attacks. For individuals, it can lead to unauthorized purchases, the stealing of funds, or identity theft.
 
@@ -34,13 +35,13 @@ If you get an email or text message from an unknown company or a company you hav
 
 These emails can be in the following forms:
 
-* Claiming that they are foreign organizations.
-* Asking about the information for a complaint you have never logged.
-* Threatening to harm you unless huge sums of money are paid.
+- Claiming that they are foreign organizations.
+- Asking about the information for a complaint you have never logged.
+- Threatening to harm you unless huge sums of money are paid.
 
 Ways to Protect Yourself from Phishing:
 
-* Turn the software update on your mobile device, laptop, or PC. These software updates allow your system to deal with any security threats.
-* Use multi-factor authentication for account logins. Some accounts allow you to verify by asking for two or more credentials. These credentials can be in the form of a security code sent to your mobile phone via text message. Some devices also allow having a scan of your fingerprint, your retina, or your face for logins. Multi-factor authentication makes it difficult for scammers to get into your account even if they get your username or password.
-* Back up your data for extra protection. You can use cloud storage in this regard, but never synchronize it with your home network. One other option is to keep an external drive for important data. Make sure to keep it in a locker and have a strong password.
-* Always report any phishing attack that you come across. This way, you’ll be helping the community.
+- Turn the software update on your mobile device, laptop, or PC. These software updates allow your system to deal with any security threats.
+- Use multi-factor authentication for account logins. Some accounts allow you to verify by asking for two or more credentials. These credentials can be in the form of a security code sent to your mobile phone via text message. Some devices also allow having a scan of your fingerprint, your retina, or your face for logins. Multi-factor authentication makes it difficult for scammers to get into your account even if they get your username or password.
+- Back up your data for extra protection. You can use cloud storage in this regard, but never synchronize it with your home network. One other option is to keep an external drive for important data. Make sure to keep it in a locker and have a strong password.
+- Always report any phishing attack that you come across. This way, you’ll be helping the community.
