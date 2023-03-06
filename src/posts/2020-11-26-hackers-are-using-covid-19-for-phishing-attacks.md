@@ -20,4 +20,4 @@ Here is a template we offer which can be used to simulate a phishing attack amon
 
 ![Zoom phishing email template](/assets/images/posts/step-2.png 'Create a zoom phishing email training test with fished.com.au')
 
-If you're interested in training the employees inside your organisation on how to detect these sorts of emails, [sign up for our free trial](https://app.fished.com.au/sign-up).
+If you're interested in training the employees inside your organisation on how to detect these sorts of emails, [sign up for our free trial](https://jaymcmullen.typeform.com/to/XSTtP407).
