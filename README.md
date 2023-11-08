@@ -45,7 +45,7 @@ yarn build
     │   └── layouts    # HTML layout files
     ├── assets         # Assets folder processed by Webpack
     │   ├── images
-    │   │   └── posts  # Bloc images
+    │   │   └── posts  # Blog images
     │   └── styles     # Blog CSS files
     └── posts          # Blog posts
 ```
